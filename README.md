@@ -204,3 +204,9 @@ This project uses the following external APIs:
 - NewsAPI (Financial News)
 
 ---
+
+## Notes
+
+The `data/uploads` and `data/reports` directories are intentionally empty and are populated at runtime.
+
+---
