@@ -203,6 +203,4 @@ This project uses the following external APIs:
 - Alpha Vantage API (Company and Stock Data)
 - NewsAPI (Financial News)
 
-Users must provide their own API keys.
-
 ---
