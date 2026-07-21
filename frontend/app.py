@@ -73,11 +73,15 @@ with tab2:
     uploaded_file = st.file_uploader(
         "Choose a PDF",
         type=["pdf"],
+        key="report_upload",
     )
 
-    if uploaded_file is not None:
+    if st.button("Upload Report"):
 
-        if st.button("Upload Report"):
+        if uploaded_file is None:
+            st.warning("Please select a PDF first.")
+
+        else:
 
             with st.spinner("Uploading..."):
 
@@ -98,13 +102,17 @@ with tab2:
 
                 result = response.json()
 
-                st.success(
-                    f"Stored {result['chunks']} chunks."
-                )
+                st.session_state["upload_success"] = True
+                st.session_state["uploaded_name"] = uploaded_file.name
+                st.session_state["chunks"] = result["chunks"]
 
             else:
-
                 st.error(response.text)
+
+    if st.session_state.get("upload_success", False):
+        st.success("Annual report uploaded and indexed successfully!")
+        st.info(f"File: {st.session_state['uploaded_name']}")
+        st.info(f"Chunks Indexed: {st.session_state['chunks']}")
 
 # -----------------------------
 # Chat
