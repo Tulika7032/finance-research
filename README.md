@@ -1,4 +1,4 @@
-# Finance Research Copilot
+# Finance Research
 
 An AI-powered financial research assistant that performs company analysis and answers questions about annual reports using a lightweight Retrieval-Augmented Generation (RAG) pipeline.
 
