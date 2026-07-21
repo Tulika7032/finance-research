@@ -94,7 +94,7 @@ Workflow:
 ## Project Structure
 
 ```
-Finance-Research-Copilot/
+Finance-Research/
 │
 ├── backend/
 │   ├── main.py
@@ -142,9 +142,9 @@ REPORTS_FOLDER=data/reports
 ### Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/finance-research-copilot.git
+git clone https://github.com/<your-username>/finance-research.git
 
-cd finance-research-copilot
+cd finance-research
 ```
 
 ### Install dependencies
